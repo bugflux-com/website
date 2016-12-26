@@ -1,0 +1,61 @@
+.page {
+	@extend .grid;
+	position: relative;
+
+	.page-nav { @extend .item, .sm-12, .xl-3; }
+	.page-box { @extend .item, .sm-12, .xl-9; }
+	.page-box .page-toggle .icon-dropdown { display: none; }
+}
+
+// Page Navigation
+.page .page-nav {
+	padding-top: 20px;
+	padding-bottom: 30px;
+
+	header {
+		color: $gray;
+		font-weight: $w-bold;
+		padding: 2px 0;
+		margin-top: 20px;
+	}
+
+	a {
+		display: block;
+		padding: 2px 0;
+	}
+}
+
+// Page Content
+.page .page-box {
+	margin: 30px 0 50px;
+}
+
+// Mobile devices
+@include media(xl) {
+	.page .page-nav {
+		display: block !important;
+		height: auto !important;
+		padding-top: 20px !important;
+	}
+}
+
+@include media(sm md lg) {
+	.page .page-nav {
+		display: none;
+		z-index: 10;
+	    position: absolute;
+	    left: $gutter;
+	    right: $gutter;
+	    background: white;
+	    box-shadow: 0 1px 3px rgba(black, 0.6);
+	    padding-top: 0;
+	    padding-bottom: 20px;
+	    top: 80px;
+	}
+
+	.page .page-box .page-toggle {
+		cursor: pointer;
+		
+		.icon-dropdown { display: inline; }
+	}
+}

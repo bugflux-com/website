@@ -1,0 +1,28 @@
+.stack {
+	@include flex(column);
+	margin: (-$gutter) 0;
+	height: 100%;
+
+	> .item {
+		@include flex-item();
+		padding: $gutter 0;
+		width: 100%;
+	}
+}
+
+// "no-gutter" property
+.stack.no-gutter {
+	margin: 0;
+
+	> .item { padding: 0; }
+}
+
+// "no-grow" property
+.stack > .item.no-grow {
+	white-space: nowrap;
+	flex: 0;
+}
+
+// "first"/"last" property
+.stack > .item.first { order: -1; }
+.stack > .item.last { order: 1; }

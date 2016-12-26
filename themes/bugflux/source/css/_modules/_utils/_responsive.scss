@@ -1,0 +1,17 @@
+.show { display: block !important; }
+.hide { display: none !important; }
+
+.sm-show, .md-show,
+.lg-show, .xl-show {
+	display: none !important;
+}
+
+.sm-show { @include media(sm) { display: block !important; }}
+.md-show { @include media(md) { display: block !important; }}
+.lg-show { @include media(lg) { display: block !important; }}
+.xl-show { @include media(xl) { display: block !important; }}
+
+.sm-hide { @include media(sm) { display: none !important; }}
+.md-hide { @include media(md) { display: none !important; }}
+.lg-hide { @include media(lg) { display: none !important; }}
+.xl-hide { @include media(xl) { display: none !important; }}

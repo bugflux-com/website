@@ -1,0 +1,31 @@
+.grid {
+	@include flex(row, flex-start, flex-start, wrap);
+	margin: 0 (-$gutter);
+
+	> .item {
+		@include flex-item();
+		box-sizing: border-box;
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+}
+
+// Basic (responsive)
+@each $size in (all, sm md lg xl, md lg xl, lg xl, xl) {
+	$prefix: nth($size, 1);
+	@for $i from 1 through $columns {
+		.grid > .item.#{$prefix}-#{$i} {
+			@include media($size) {
+				flex-basis: (100% / $columns) * $i;
+				max-width: (100% / $columns) * $i;
+			}
+		}
+	}
+}
+
+// "no-gutter" property
+.grid.no-gutter {
+	margin: 0;
+
+	> .item { padding: 0; }
+}

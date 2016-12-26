@@ -1,0 +1,40 @@
+$f: 1;
+
+/* ==== Font weight ==== */
+$w-light: 300;
+$w-medium: 400;
+$w-bold: 500;
+
+/* ==== Default colors ==== */
+$c-primary: $red;
+$c-second: $blue;
+
+/* ==== Default font ==== */
+$font-size: 15px;
+$font-family: 'Roboto', 'Ubuntu', 'Lato', 'Arial';
+$font-weight: $w-medium;
+$font-color: $gray-dark;
+$line-height: 1.4;
+
+/* ==== Views ==== */
+$columns: 12;
+$gutter: 20px;
+
+$breakpoint-sm: 480px;
+$breakpoint-md:	680px;
+$breakpoint-lg: 880px;
+$breakpoint-xl: 900px;
+
+/* ==== Navigation ==== */
+$nav-height: 50px;
+$nav-border-size: 1px;
+
+$nav-hidden: sm, md;
+$nav-visible: lg, xl;
+
+/* ==== Footer ==== */
+$footer-height: 200px;
+$footer-height-min: 150px;
+$footer-background: #fdfdfd;
+$footer-border: #e4e4e4;
+$footer-font-color: $gray-light;

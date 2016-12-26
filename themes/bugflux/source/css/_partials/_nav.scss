@@ -1,0 +1,75 @@
+.nav {
+	height: $nav-height;
+	line-height: $nav-height;
+	border-bottom: $nav-border-size solid rgba(black, 0.1);
+
+	a { color: $gray; }
+	a:hover { color: $c-primary; }
+	a.inacessible { color: lighten($gray, 40%); }
+	a.active { color: $c-primary; }
+}
+
+.nav-brand {
+	color: $gray-light;
+
+	a { display: inline-block; }
+	> span { color: $gray; }
+}
+
+.nav-links {
+	float: right;
+	text-align: right;
+
+	a {
+		float: left;
+		display: block;
+		padding: 0 ($f*12px);
+	}
+}
+
+// Mobile devices
+.nav .nav-links {
+	position: relative;
+
+	> .icon-menu {
+		display: none;
+		width: $nav-height;
+		height: $nav-height;
+		cursor: pointer;
+
+		@include media($nav-hidden) {
+			display: block;
+			background: url('../img/icons/menu.png') center center no-repeat;
+			background-size: 24px;
+		}
+	}
+
+	> .menu {
+		overflow: hidden;
+
+		@include media($nav-visible) {
+			display: block !important;
+			height: auto !important;
+		}
+
+		@include media($nav-hidden) {
+			display: none;
+			z-index: 100;
+			width: auto;
+			min-width: 160px;
+			background: white;
+			text-align: left;
+			box-shadow: 0 1px 3px rgba(black, 0.6);
+			padding: 8px 0;
+			position: absolute;
+			top: $nav-height - 5px; 
+			right: 0;
+
+			a {
+				float: none;
+				line-height: normal;
+				padding: 8px 20px;
+			}
+		}
+	}
+}

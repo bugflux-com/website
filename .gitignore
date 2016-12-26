@@ -1,0 +1,8 @@
+/node_modules
+/public
+/.deploy*
+
+*.log
+db.json
+.DS_Store
+Thumbs.db

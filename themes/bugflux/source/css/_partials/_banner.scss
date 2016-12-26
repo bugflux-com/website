@@ -1,0 +1,32 @@
+.banner {
+	height: 600px;
+	background: #e65a4a url(../img/background.jpg) center center no-repeat;
+	background-size: cover;
+	margin-top: -$nav-border-size;
+	color: white;
+
+	header h1,
+	header p {
+		color: white;
+		font-weight: $w-light;
+		padding: 5px 0;
+		margin: 0;
+	}
+
+	header h1 { font-size: 50px; }
+	header p { font-size: 28px; }
+
+	@include media(sm) {
+		header h1 { font-size: 40px; }
+		header p { font-size: 22px; }
+	}
+
+	@include media(md) {
+		header h1 { font-size: 45px; }
+		header p { font-size: 25px; }
+	}
+
+	@include media(sm md) {
+		h1, p { text-align: left; }
+	}
+}

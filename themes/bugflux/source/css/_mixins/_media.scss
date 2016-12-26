@@ -1,0 +1,21 @@
+@mixin media($sizes) {
+	@if index($sizes, all) {
+		@content;
+	}
+
+	@if index($sizes, sm) {
+		@media all and (max-width: $breakpoint-sm) { @content; }
+	}
+
+	@if index($sizes, md) {
+		@media all and (min-width: ($breakpoint-sm + 1px)) and (max-width: $breakpoint-md) { @content; }
+	}
+
+	@if index($sizes, lg) {
+		@media all and (min-width: ($breakpoint-md + 1px)) and (max-width: $breakpoint-lg) { @content; }
+	}
+
+	@if index($sizes, xl) {
+		@media all and (min-width: ($breakpoint-lg + 1px)) { @content; }
+	}
+}

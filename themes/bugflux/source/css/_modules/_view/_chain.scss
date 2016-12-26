@@ -1,0 +1,27 @@
+.chain {
+	@include flex(row);
+	margin: 0 (-$gutter);
+
+	> .item {
+		@include flex-item();
+		padding: 0 $gutter;
+		height: 100%;
+	}
+}
+
+// "no-gutter" property
+.chain.no-gutter {
+	margin: 0;
+
+	> .item { padding: 0; }
+}
+
+// "no-grow" property
+.chain > .item.no-grow {
+	white-space: nowrap;
+	flex: 0;
+}
+
+// "first"/"last" property
+.chain > .item.first { order: -1; }
+.chain > .item.last { order: 1; }
