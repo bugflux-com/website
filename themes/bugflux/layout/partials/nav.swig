@@ -13,7 +13,7 @@
 				<div class="nav-links">
 					<i class="icon-menu"></i>
 					<nav class="menu">
-						<a href="{{ url_for(path_for_first(site.pages, 'guide')) }}" class="{{ print_if(path.startsWith("guide"), 'active') }}"> Guide </a>
+						<a href="{{ url_for(path_for_first(site.pages, 'guide', '1.0')) }}" class="{{ print_if(path.startsWith("guide"), 'active') }}"> Guide </a>
 						<a href="{{ url_for(path_for_first(site.pages, 'api')) }}" class="{{ print_if(path.startsWith("api"), 'active') }}"> API </a>
 						<a class="inacessible"> Blog </a>
 						<a class="inacessible"> Forum </a>

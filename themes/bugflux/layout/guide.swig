@@ -5,6 +5,7 @@
 				<!-- Versions -->
 				{% set versions = {
 					'master': '/guide/master/getting-started/overview.html',
+					'1.0': '/guide/1.0/getting-started/overview.html',
 				} %}
 				
 				<section>
