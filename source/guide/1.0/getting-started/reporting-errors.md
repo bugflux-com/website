@@ -10,7 +10,7 @@ order: 01.20
  * [Other reports fields](#Other-reports-fields)
 * [Sending reports](#Sending-reports)
  * [C#](#C-sharp)
- * [Java](#Java)
+ * [Node.js](#Node-js)
 * [Report receiving process](#Report-receiving-process)
  * [Validation](#Validation)
  * [Rejection rules](#Rejection-rules)
@@ -92,34 +92,36 @@ Config.DefaultConfig.ProjectAndClientInfo.ProjectKey = "abcd1234";
 throw new Exception("Something bad happened!"); 
 ```
 
-### Java
+### Node.js
 
-```java
-Config myConfig = new Config("http://bugflux.your-domain.com");
-myConfig.getProjectAndClientInfo().setProjectKey("abcd1234");
+```javascript
+var fs = require('fs');
+var bugflux = require('bugflux');
 
-try
-{
-    throw new Exception("Something bad happened!");
-}
-catch (Exception ex)
-{
-    Report report = new Report(ex);
-    report.send(myConfig);
-}
+bugflux.setDefault({
+    url: 'https://bugflux.your-domain.com/',
+    project: 'Your-project-key',
+});
+
+fs.readFile('/etc/passwd', function(err, data) {
+    if(err) bugflux.send(err);
+
+    // ...
+});
 ```
 
 or for handling unhandled exceptions:
 
 
-```java
-Config.setEnableDefaultBehaviour(true);
-Config defaultConfig = Config.getDefaultConfig();
-defaultConfig.serverAddress = "http://bugflux.your-domain.com";
-ProjectClientInfo pci = defaultConfig.getProjectAndClientInfo();
-pci.setProjectKey("abcd1234");
+```javascript
+var bugflux = require('bugflux');
 
-throw new Exception("Something bad happened!"); 
+bugflux.setDefault({
+    url: 'https://bugflux.your-domain.com/',
+    project: 'Your-project-key',
+});
+
+throw new Error();
 ```
 
 ## Report receiving process

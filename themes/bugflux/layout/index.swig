@@ -30,7 +30,7 @@
 			<div class="item sm-12 lg-4 pts">
 				<div class="center">
 					<div class="center-box">
-						<img src="img/workflow.svg" alt="Bugflux Basic Concept" width="280">
+						<img src="img/workflow.svg" alt="Bugflux Basic Concept" width="280" style="max-height: 300px">
 					</div>
 				</div>
 				<small style="opacity: 0.6;">Icons by <a href="http://webhostingmedia.net">webhostingmedia</a></small>
@@ -45,10 +45,9 @@
 					<li> Bugflux is and it will always be <strong>completely free </strong></li>
 					<li> Bugflux is <strong>flexible</strong> - it can be used with different servers, with different databases and both on Windows and Linux </li>
 					<li> Bugflux is <strong>open source</strong> - you can always add your own features or modify our code </li>
-					<li> Bugflux has <strong>fast installers</strong> - configurating lasts only few minutes after which you can use Bugflux locally </li>
 				</ul>
 
-				<p><a href="{{ url_for('guide/the-basics/setup.html#Installation-manually') }}"> Installation guide </a> - get your local instance of the Bugflux. </p>
+				<p><a href="/guide/1.0/getting-started/installation.html#Installation-manually"> Installation guide </a> - get your local instance of the Bugflux. </p>
 			</div>
 		</div>
 

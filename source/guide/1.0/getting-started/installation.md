@@ -5,39 +5,11 @@ category: Getting started
 layout: guide
 order: 01.10
 ---
-* [Installation with setup](#Installation-with-setup)
- * [Windows](#Windows)
 * [Installation manually](#Installation-manually)
  * [PHP and Composer](#PHP-and-Composer)
  * [Database](#Database)
  * [Server](#Server)
 * [After installation](#After-installation)
-  
-## Installation with setup
-
-Bugflux setup can be downloaded from [GitHub](https://github.com/bugflux-com?q=setup-). 
-
-If you want to use our setup to install and configure Bugflux you should download setup for you operating system, which contains whole application within itselt. Our setups configure Bugflux to use nginx server and SQLite database. **Installation do not configure any system service, directory or variable** - it make chages only in specified installation directory.
-
-Every setup contains `README.md` file with description of setup process in more detail.
-
-### Windows
-
-Windows setup contains `bugflux-setup.bat` script which should be run to install bugflux.
-
-Example usage: 
-```
-bugflux-setup.bat C:\Users\John 3010 9124
-```
-
-**First parameter is a path**, where to install Bugflux, **second is a port number on which nginx will listen** and third parameter is a port on which php-cgi will listen (required by nginx). First parameter is required, while others are optional. Default value for nginx port is 80, but we recommend to change it to avoid port blocking problems, because 80 is also default port for many other servers. Default value for php-cgi is 9123.
-
-Setup downloads PHP and nginx, so if you already have nginx hosting your sevices it would be better to download just Bugflux application and configure nginx manually.
-
-Use `run_bugflux.bat` script in installation directory to run php-cgi and nginx. Use `shutdown_bugflux.bat` script to shutdown them.
-
-If you want to uninstall Bugflux, all you need to do is deleting bugflux directory. Be careful! This will delete all your data collected by the server.
-
 
 ## Installation manually
 

@@ -38,7 +38,6 @@ Why should I choose Bugflux? There are many other similar systems.
 - Bugflux is and it will always be completely free
 - Bugflux is flexible - it can be used with different servers, with different databases and both on Windows and Linux
 - Bugflux is open source - you can always add your own features or modify our code
-- Bugflux has fast installers - configurating lasts only few minutes after which you can use Bugflux locally
 
 
 ## How should I start
@@ -47,7 +46,7 @@ First of all Bugflux can be used in two ways: using [our server instance](http:/
 
 Demo | Local server
 --- | ---
-You don't need to download Bugflux | You must download and install Bugflux (but it lasts only few minutes!)
+You don't need to download Bugflux | You must download and install Bugflux
 Only one project | As many projects as you wish
 You can't use it for indefinite time period - we can delete your errors' data after two weeks | Your data is hold until you delete it
 You can't develop or add features to Bugflux demo | You can do with Bugflux code what do you want with immediate effect
